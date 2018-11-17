@@ -1,19 +1,23 @@
 #include<stdio.h>
 int main()
-{	int num1,num2,temp1,temp2,prod=1,lcm,i;
-	printf("Enter the two numbers");
-	scanf("%d%d",&num1,&num2);
-	temp1=num1;
-	temp2=num2;
-	for(i=2;i<=100;i++)
-	{
-		if(temp1%i==0 && temp2%i==0){
-			temp1=temp1/i;
-			temp2=temp2/i;
-			prod=prod*i;
-		}	
+{	int non,num[100],temp=0,lcm,i,m;
+	printf("Enter the number of numbers");
+	scanf("%d",&non);
+	for(i=0;i<non;i++){
+		scanf("%d",&num[i]);
 	}
-	printf("%d\n%d\n%d\n",temp1,temp2,prod);
-	lcm=temp1*temp2*prod;
+	for(i=0;i<non;i++){
+		if(temp<num[i])temp=num[i];
+	}
+	for(m=1;m<100;m++){
+		lcm=temp*m;
+			for(i=0;i<non;i++){
+				printf("%d\n",lcm);
+				if(lcm%num[i]!=0)break;
+			}
+			
+			if(i==non)break;
+			
+	}
 	printf("%d",lcm);
 }
