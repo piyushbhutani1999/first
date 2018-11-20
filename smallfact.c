@@ -1,5 +1,5 @@
 #include<stdio.h>
-int main()
+int main()//CHECK TILL 8 FACTORIAL YOU WILL GET ANS FOR EVERY PROBLEM
 {	int num,b[200],a[200],carry=0,s[200],k=0,i,m=1,f;
 	for(i=1;i<200;i++){
 		a[i]=0;
@@ -12,7 +12,7 @@ int main()
 		b[k]=(a[k]*i)+carry;
 		a[k]=b[k]%10;
 		carry=b[k]/10;
-		s[m]=k;
+		s[m]=k;//ye k ki value ko store kar lega aur bta dega ki pichle number me kitne digit the=s[m-1]  
 		if(b[k]==0){
 			k++;
 		}
